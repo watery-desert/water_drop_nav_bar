@@ -5,7 +5,6 @@
 
 # Water Drop Nav Bar
 
-## Demo Screen Recording
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/demo_recording.gif"  width="500"/>
 
 ## Design Credit
@@ -52,6 +51,8 @@
       ),
     );
 ```
+
+Feel free to report issue. Please consider giving me star and check my other repositories. This will motivate me to keep working.
 
 ## Follow me on social media
 

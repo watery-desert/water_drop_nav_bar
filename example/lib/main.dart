@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final accentColor = Theme.of(context).accentColor;
     return Scaffold(
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
@@ -89,8 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeOutQuad);
         },
-        // iconSize: 30,
-        // activeColor: Colors.blue[900]!,
         selectedIndex: selectedIndex,
         barItems: [
           BarItem(
