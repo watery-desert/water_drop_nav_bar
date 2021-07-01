@@ -42,14 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
         controller: pageController,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width / 2,
-            height: double.infinity,
-            alignment: Alignment.bottomCenter,
-            padding: const EdgeInsets.only(bottom: 200),
+            alignment: Alignment.center,
             child: Icon(
               Icons.bookmark_rounded,
               size: 56,
-              color: Colors.amber[300],
+              color: Colors.amber[400],
             ),
           ),
           Container(

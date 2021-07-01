@@ -11,6 +11,13 @@
 [Animated Tabbar by Cuberto](https://dribbble.com/shots/14723171-Animated-Tabbar)
 
 ## How to use?
+Add `WaterDropNavBar()` as `bottomNavigationBar` of `Scaffold()` and body would be `PageView()` with `NeverScrollableScrollPhysics()` don't try to upate the seleted index from `onPageChanged` or will see some weird behaviour. You can use `Stack()` or `AnimatedSwitcher()` for custom page transition animation. 
+
+Keep that in mind this navigation menu is taller than normal for small screen it might cover more screen real estate.
+
+### **Do and don't**
+ - Don't make icon size too big.
+ - use complementary filled and outlined icons for best result.
 
 ```dart
  return Scaffold(
