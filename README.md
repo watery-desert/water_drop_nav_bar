@@ -18,7 +18,7 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
 ### **Do and don't**
  - Don't make icon size too big.
  - Use complementary filled and outlined icons for best result.
- - background color of `WaterDropNavBar()` and `Scaffold()` body (or whatever widget you are using) must be different so anyone can tell (see the example app). This will visualize that the water drop is hanging from the top.
+ - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()` body (or whatever widget you are using) must be different so anyone can tell (see the example app). This will visualize that the water drop is hanging from the top.
 
  ```dart 
  import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
