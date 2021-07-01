@@ -15,6 +15,8 @@
  <details> 
  <summary> Api Reference
  </summary>
+<br></br>
+
 barItems → `List<BarItem>`
 - List of bar items shown horizontally, must not be more than 4 and less than 2.\
  *required*
