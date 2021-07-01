@@ -15,7 +15,7 @@
  <details> 
  <summary> Api Reference
  </summary>
-<br></br>
+<br>
 
 barItems → `List<BarItem>`
 - List of bar items shown horizontally, must not be more than 4 and less than 2.\
@@ -47,7 +47,7 @@ iconSize → `double`
 *optional [30]* 
 
 </details> 
-<br></br>
+<br>
 
 Add `WaterDropNavBar()` as `bottomNavigationBar` of `Scaffold()` and body would be `PageView()` with `NeverScrollableScrollPhysics()` don't try to upate the seleted index from `onPageChanged` or will see some weird behaviour. Insted of `PageView()` You can use `Stack()` or `AnimatedSwitcher()` for custom page transition animation. 
 
