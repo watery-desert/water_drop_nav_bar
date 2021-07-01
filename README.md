@@ -20,9 +20,11 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
  - Use complementary filled and outlined icons for best result.
  - background color of `WaterDropNavBar()` and `Scaffold()` body (or whatever widget you are using) must be different so anyone can tell (see the example app). This will visualize that the water drop is hanging from the top.
 
-**Import it only**
+**Install and import it**
 
- ```import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';```
+ ```dart 
+ import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
+ ```
 
 ```dart
  return Scaffold(
