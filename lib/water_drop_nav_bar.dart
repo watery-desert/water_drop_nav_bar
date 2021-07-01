@@ -10,13 +10,13 @@ class WaterDropNavBar extends StatelessWidget {
   /// Background Color of the bar.
   final Color backgroundColor;
 
-  /// Callback When you press barItem.
+  /// Callback When individual barItem is pressed.
   final OnButtonPressCallback onButtonPressed;
 
   /// Current selected index of the bar item.
   final int selectedIndex;
 
-  /// List of bar items, must not be more than 4 and less than 2.
+  /// List of bar items shown horizontally, must not be more than 4 and less than 2.
   final List<BarItem> barItems;
 
   /// Color of water drop which is also the active icon color.
@@ -25,7 +25,7 @@ class WaterDropNavBar extends StatelessWidget {
   /// Inactive icon color by default it will use water drop color.
   final Color inactiveIconColor;
 
-  /// each bar icon size default value is 30 don't make it too big or small.
+  /// Each active & inactive icon size, default value is 30 don't make it too big or small.
   final double iconSize;
 
   const WaterDropNavBar({

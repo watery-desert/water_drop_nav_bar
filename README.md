@@ -10,6 +10,38 @@
 ## Design Credit
 [Animated Tabbar by Cuberto](https://dribbble.com/shots/14723171-Animated-Tabbar)
 
+## Api Reference
+
+barItems → `List<BarItem>`
+- List of bar items shown horizontally, must not be more than 4 and less than 2.\
+ *required*
+
+onButtonPressed → `OnButtonPressCallback`
+- Callback When individual barItem is pressed.\
+ *required*
+
+
+selectedIndex → `int`
+- Current selected index of the bar item.\
+ *required*
+
+backgroundColor → `Color`
+- Background Color of the bar.\
+*optional [Colors.white]*
+
+waterDropColor → `Color` 
+- Color of water drop which is also the active icon color.\
+*optional [Color(0xFF5B75F0)]* 
+
+inactiveIconColor → `Color`
+- Inactive icon color by default it will use water drop color.\
+*optional [waterDropColor]*
+
+iconSize → `double`
+- Each active & inactive icon size, default value is 30 don't make it too big or small.\
+*optional [30]* 
+
+
 ## How to use?
 Add `WaterDropNavBar()` as `bottomNavigationBar` of `Scaffold()` and body would be `PageView()` with `NeverScrollableScrollPhysics()` don't try to upate the seleted index from `onPageChanged` or will see some weird behaviour. Insted of `PageView()` You can use `Stack()` or `AnimatedSwitcher()` for custom page transition animation. 
 
