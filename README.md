@@ -1,6 +1,11 @@
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert_logo.png" height="200" alt="Water Drop Nav Bar" />
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/logo.png" height="200" alt="Water Drop Nav Bar" />
+</p>
+
+<p align="center">
+<a href="https://github.com/watery-desert/water_drop_nav_bar"><img src="https://img.shields.io/github/stars/watery-desert/water_drop_nav_bar?logo=github&style=flat-square" alt="Star on Github"></a>
+<a href="https://pub.dev/packages/water_drop_nav_bar"><img src="https://img.shields.io/badge/pub.dev-website-deepskyblue.svg?style=flat-square" alt="pub.dev"></a>
 </p>
 
 # Water Drop Nav Bar
@@ -106,12 +111,12 @@ Feel free to report issue. Please consider giving me star and check my other rep
 
 ## Follow me on social media
 
-[![alt text][1.1]][1]
-[![alt text][2.1]][2]
+[![Twitter][1.1]][twitter link]
+[![Instagram][2.1]][instagram link]
 
-[1.1]: https://github.com/watery-desert/assets/blob/main/social_logo/twitter.png?raw=true
+[1.1]: https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/twitter.png
 
-[2.1]: https://github.com/watery-desert/assets/blob/main/social_logo/instagram.png?raw=true
+[2.1]: https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/instagram.png
 
-[1]: https://twitter.com/watery_desert
-[2]: https://www.instagram.com/watery_desert/
+[twitter link]: https://twitter.com/watery_desert
+[instagram link]: https://www.instagram.com/watery_desert/
