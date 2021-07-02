@@ -3,11 +3,6 @@
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/logo.png" height="200" alt="Water Drop Nav Bar" />
 </p>
 
-<p align="center">
-<a href="https://github.com/watery-desert/water_drop_nav_bar"><img src="https://img.shields.io/github/stars/watery-desert/water_drop_nav_bar?logo=github&style=flat-square" alt="Star on Github"></a>
-<a href="https://pub.dev/packages/water_drop_nav_bar"><img src="https://img.shields.io/badge/pub.dev-website-deepskyblue.svg?style=flat-square" alt="pub.dev"></a>
-</p>
-
 # Water Drop Nav Bar
 
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/demo_recording.gif"  width="500"/>
