@@ -16,7 +16,7 @@ class WaterDropNavBar extends StatelessWidget {
   /// Current selected index of the bar item.
   final int selectedIndex;
 
-  /// List of bar items shown horizontally, must not be more than 4 and less than 2.
+  /// List of bar items that shows horizontally, Minimum 2 and maximum 4 items.
   final List<BarItem> barItems;
 
   /// Color of water drop which is also the active icon color.

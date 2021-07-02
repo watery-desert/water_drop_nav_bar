@@ -18,12 +18,12 @@
 ## How to use?
 
  <details> 
- <summary> Api Reference
+ <summary> API Reference
  </summary>
 <br>
 
 barItems → `List<BarItem>`
-- List of bar items shown horizontally, must not be more than 4 and less than 2.\
+- List of bar items that shows horizontally, Minimum 2 and maximum 4 items.\
  *required*
 
 onButtonPressed → `OnButtonPressCallback`
