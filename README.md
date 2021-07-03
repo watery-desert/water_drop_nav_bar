@@ -3,6 +3,12 @@
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/logo.png" height="200" alt="Water Drop Nav Bar" />
 </p>
 
+<center>
+
+[![Instagram Badge](https://img.shields.io/badge/-watery_desert-e84393?style=flat-square&labelColor=e84393&logo=instagram&logoColor=white)](https://instagram.com/watery_desert)
+[![Twitter Badge](https://img.shields.io/badge/-watery_desert-1ca0f1?style=flat-square&logo=twitter&logoColor=white&link=https://twitter.com/watery_desert)](https://twitter.com/watery_desert)
+</center>
+
 # Water Drop Nav Bar
 
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/demo_recording.gif"  width="500"/>
@@ -56,7 +62,7 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
 ### **Do and don't**
  - Don't make icon size too big.
  - Use complementary filled and outlined icons for best result.
- - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()` body (or whatever widget you are using) must be different so anyone can tell (see the example app). This will visualize that the water drop is hanging from the top.
+ - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
 
  ```dart 
  import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
@@ -102,16 +108,4 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
     );
 ```
 
-Feel free to report issue. Please consider giving me star and check my other repositories. This will motivate me to keep working.
-
-## Follow me on social media
-
-[![Twitter][1.1]][twitter link]
-[![Instagram][2.1]][instagram link]
-
-[1.1]: https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/twitter.png
-
-[2.1]: https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/instagram.png
-
-[twitter link]: https://twitter.com/watery_desert
-[instagram link]: https://www.instagram.com/watery_desert/
+Please consider giving me star and check my other repositories. This will motivate me to keep working.
