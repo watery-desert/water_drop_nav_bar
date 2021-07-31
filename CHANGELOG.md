@@ -1,3 +1,10 @@
+## 2.0.0 
+ - `onButtonPressed` is now `onItemSelected` 
+ - Bar height is readjusted now, it looks better on android.
+   additionally you can provide some padding at the bottom. 
+   (nothing to do on iOS).
+ - Test added.  
+
 ## 1.0.1
  - updated doc to fix some language mistake.
 ## 1.0.0

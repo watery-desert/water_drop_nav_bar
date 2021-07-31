@@ -50,7 +50,7 @@ class BuildRunningDrop extends StatelessWidget {
                         ),
                       )
                       .value,
-                  height: Tween<double>(begin: 18, end: 24)
+                  height: Tween<double>(begin: 16, end: 24)
                       .animate(
                         CurvedAnimation(
                           parent: controller,
@@ -73,7 +73,7 @@ class BuildRunningDrop extends StatelessWidget {
                         ),
                       )
                       .value,
-                  height: Tween<double>(begin: 24, end: 18)
+                  height: Tween<double>(begin: 24, end: 16)
                       .animate(
                         CurvedAnimation(
                           parent: controller,
@@ -84,10 +84,11 @@ class BuildRunningDrop extends StatelessWidget {
                 ),
               ),
               Transform.translate(
-                offset: Tween<Offset>(begin: Offset(0, 6.6), end: Offset(0, 46))
+                offset: Tween<Offset>(begin: Offset(0, 5.0), end: Offset(0, 40))
                     .animate(CurvedAnimation(
                       parent: controller,
-                      curve: Interval(0.45, 0.70),
+                      // 46
+                      curve: Interval(0.40, 0.70),
                     ))
                     .value,
                 child: Container(
@@ -95,6 +96,7 @@ class BuildRunningDrop extends StatelessWidget {
                   height: 10.0,
                   decoration: BoxDecoration(
                     color: controller.value > 0.65 ? Colors.transparent : color,
+                    // color: Colors.amber,
                     shape: BoxShape.circle,
                   ),
                 ),

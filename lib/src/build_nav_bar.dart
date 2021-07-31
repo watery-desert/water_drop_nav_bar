@@ -10,20 +10,22 @@ class BuildNavBar extends StatefulWidget {
   final int selectedIndex;
   final List<BarItem> itmes;
   final Color backgroundColor;
-  final OnButtonPressCallback onButtonPressed;
+  final OnButtonPressCallback onItemSelected;
   final Color dropColor;
   final double iconSize;
   final Color inactiveIconColor;
+  final double? bottomPadding;
 
   const BuildNavBar({
     Key? key,
     required this.itmes,
     required this.backgroundColor,
     required this.selectedIndex,
-    required this.onButtonPressed,
+    required this.onItemSelected,
     required this.dropColor,
     required this.iconSize,
     required this.inactiveIconColor,
+    required this.bottomPadding,
   }) : super(key: key);
 
   @override
@@ -32,7 +34,6 @@ class BuildNavBar extends StatefulWidget {
 
 class _BuildNavBarState extends State<BuildNavBar>
     with TickerProviderStateMixin {
-  // int selectedIndex = 0;
   int _previousIndex = 0;
 
   late AnimationController _controller;
@@ -42,6 +43,7 @@ class _BuildNavBarState extends State<BuildNavBar>
     super.initState();
     _controller = AnimationController(
       vsync: this,
+      //milliseconds: 800
       duration: const Duration(milliseconds: 800),
     )..forward(from: 0.0);
   }
@@ -52,7 +54,7 @@ class _BuildNavBarState extends State<BuildNavBar>
     if (selectedIndex == index || _controller.isAnimating) {
       return;
     } else {
-      widget.onButtonPressed(index);
+      widget.onItemSelected(index);
       _controller.forward(from: 0.0);
       _controller.addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -72,22 +74,27 @@ class _BuildNavBarState extends State<BuildNavBar>
     final items = widget.itmes;
     final iconSize = widget.iconSize;
     final inactiveIconColor = widget.inactiveIconColor;
+    final bottomPadding =
+        widget.bottomPadding ?? MediaQuery.of(context).padding.bottom;
+    final barHeight = 60 + bottomPadding;
     return Container(
-      height: 100,
+      height: barHeight,
       color: backgroundColor,
       child: Stack(
         children: [
-          AnimatedBuilder(
-            animation: _controller,
-            builder: (_, __) => Align(
-              alignment: Alignment.center,
-              child: Row(
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: AnimatedBuilder(
+              animation: _controller,
+              builder: (_, __) => Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                // crossAxisAlignment: CrossAxisAlignment.end,
                 children: items.map(
                   (barItem) {
                     final index = items.indexOf(barItem);
                     return BuildIconButton(
+                      bottomPadding: bottomPadding,
+                      barHeight: barHeight,
                       barColor: backgroundColor,
                       inactiveColor: inactiveIconColor,
                       color: dropColor,

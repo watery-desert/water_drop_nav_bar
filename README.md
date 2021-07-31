@@ -1,12 +1,26 @@
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/logo.png" height="200" alt="Water Drop Nav Bar" />
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/package_cover.png" alt="Water Drop Nav Bar" />
 </p>
 
 <div align="center">
 
-[![Instagram Badge](https://img.shields.io/badge/-watery_desert-e84393?style=flat-square&labelColor=e84393&logo=instagram&logoColor=white)](https://instagram.com/watery_desert)
-[![Twitter Badge](https://img.shields.io/badge/-watery_desert-1ca0f1?style=flat-square&logo=twitter&logoColor=white&link=https://twitter.com/watery_desert)](https://twitter.com/watery_desert)
+<a href="https://instagram.com/watery_desert">
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/instagram.png" height="32" alt="instagram: watery_desert"></a>
+
+<a href="https://twitter.com/watery_desert">
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/twitter.png" height="32" alt="twitter: watery_desert"></a>
+
+<a href="https://dribbble.com/watery_desert">
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/dribbble.png" height="32" alt="dribbble: watery_desert"></a>
+
+<a href="https://www.youtube.com/channel/UCMr8V70B4402CNOJEYQ30Qg">
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/youtube.png
+" height="32" alt="youtube: watery_desert"></a>
+
+
+<!-- [![Instagram Badge](https://img.shields.io/badge/-watery_desert-e84393?style=flat-square&labelColor=e84393&logo=instagram&logoColor=white)](https://instagram.com/watery_desert)
+[![Twitter Badge](https://img.shields.io/badge/-watery_desert-1ca0f1?style=flat-square&logo=twitter&logoColor=white&link=https://twitter.com/watery_desert)](https://twitter.com/watery_desert) -->
 </div>
 
 # Water Drop Nav Bar
@@ -27,7 +41,7 @@ barItems → `List<BarItem>`
 - List of bar items that shows horizontally, Minimum 2 and maximum 4 items.\
  *required*
 
-onButtonPressed → `OnButtonPressCallback`
+onItemSelected → `OnButtonPressCallback`
 - Callback When individual barItem is pressed.\
  *required*
 
@@ -49,8 +63,13 @@ inactiveIconColor → `Color`
 *optional [waterDropColor]*
 
 iconSize → `double`
-- Each active & inactive icon size, default value is 30 don't make it too big or small.\
-*optional [30]* 
+- Each active & inactive icon size, default value is 28 don't make it too big or small.\
+*optional [28]* 
+
+bottomPadding → `double`
+- Bottom padding of the bar. If nothing is provided the it will use
+  [MediaQuery.of(context).padding.bottom] value.\
+ *optional*  
 
 </details> 
 <br>
@@ -63,10 +82,21 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
  - Don't make icon size too big.
  - Use complementary filled and outlined icons for best result.
  - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
+ - For android I highly recommend to wrap `Scaffold` with [AnnotatedRegion<SystemUiOverlayStyle>] to get best result, check example app I implemented it.
 
- ```dart 
- import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
- ```
+#### Installation
+Add `water_drop_nav_bar:` to your `pubspec.yaml` dependencies then run `flutter pub get`
+
+```yaml
+ dependencies:
+  water_drop_nav_bar:
+```
+#### Import
+Add this line to import the package.
+
+```dart 
+import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
+```
 
 ```dart
  return Scaffold(
@@ -78,7 +108,7 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
       ),
       bottomNavigationBar: WaterDropNavBar(
         backgroundColor: Colors.white,
-        onButtonPressed: (index) {
+        onItemSelected: (index) {
           setState(() {
             selectedIndex = index;
           });
@@ -107,5 +137,3 @@ Keep that in mind this navigation bar is taller than normal for small screen it 
       ),
     );
 ```
-
-Please consider giving me star and check my other repositories. This will motivate me to keep working.

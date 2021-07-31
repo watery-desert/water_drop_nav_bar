@@ -11,7 +11,7 @@ class WaterDropNavBar extends StatelessWidget {
   final Color backgroundColor;
 
   /// Callback When individual barItem is pressed.
-  final OnButtonPressCallback onButtonPressed;
+  final OnButtonPressCallback onItemSelected;
 
   /// Current selected index of the bar item.
   final int selectedIndex;
@@ -28,13 +28,18 @@ class WaterDropNavBar extends StatelessWidget {
   /// Each active & inactive icon size, default value is 30 don't make it too big or small.
   final double iconSize;
 
+  /// Bottom padding of the bar. If nothing is provided the it will use
+  /// [MediaQuery.of(context).padding.bottom] value.
+  final double? bottomPadding;
+
   const WaterDropNavBar({
     required this.barItems,
     required this.selectedIndex,
-    required this.onButtonPressed,
+    required this.onItemSelected,
+    this.bottomPadding,
     this.backgroundColor = Colors.white,
     this.waterDropColor = const Color(0xFF5B75F0),
-    this.iconSize = 30,
+    this.iconSize = 28,
     Color? inactiveIconColor,
     Key? key,
   })  : inactiveIconColor = inactiveIconColor ?? waterDropColor,
@@ -48,10 +53,11 @@ class WaterDropNavBar extends StatelessWidget {
       itmes: barItems,
       backgroundColor: backgroundColor,
       selectedIndex: selectedIndex,
-      onButtonPressed: onButtonPressed,
+      onItemSelected: onItemSelected,
       dropColor: waterDropColor,
       iconSize: iconSize,
       inactiveIconColor: inactiveIconColor,
+      bottomPadding: bottomPadding,
     );
   }
 }

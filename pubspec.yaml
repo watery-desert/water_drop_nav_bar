@@ -1,6 +1,6 @@
 name: water_drop_nav_bar
-description: Bottom navigation bar. It has unique water drop effect. Indicates with filled icon.
-version: 1.0.1
+description: Bottom navigation bar, it has unique water drop effect. When water droplet falls it marks seleted item.
+version: 2.0.0
 repository: https://github.com/watery-desert/water_drop_nav_bar
 
 environment:
