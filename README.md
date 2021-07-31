@@ -15,15 +15,14 @@
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/dribbble.png" height="32" alt="dribbble: watery_desert"></a>
 
 <a href="https://www.youtube.com/channel/UCMr8V70B4402CNOJEYQ30Qg">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/youtube.png
-" height="32" alt="youtube: watery_desert"></a>
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/youtube.png" height="32" alt="youtube: watery_desert"></a>
 
 
 <!-- [![Instagram Badge](https://img.shields.io/badge/-watery_desert-e84393?style=flat-square&labelColor=e84393&logo=instagram&logoColor=white)](https://instagram.com/watery_desert)
 [![Twitter Badge](https://img.shields.io/badge/-watery_desert-1ca0f1?style=flat-square&logo=twitter&logoColor=white&link=https://twitter.com/watery_desert)](https://twitter.com/watery_desert) -->
 </div>
 
-# Water Drop Nav Bar
+## Demo Screen recording
 
 <img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/demo_recording.gif"  width="500"/>
 
