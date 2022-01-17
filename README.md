@@ -128,12 +128,12 @@ bottomPadding → `double`
  - Don't make icon size too big.
  - Use complementary filled and outlined icons for best result.
  - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
- - ⚠️ For android it's recommend to wrap `Scaffold` with `AnnotatedRegion<SystemUiOverlayStyle>` to change that black navigation bar color to `WaterDropNavBar` `backgroundColor`. Check tha example app. Like this 👇
+ - ⚠️ For android it's recommended to wrap `Scaffold` with `AnnotatedRegion<SystemUiOverlayStyle>` to change that black navigation bar color to `WaterDropNavBar` `backgroundColor`. Check the example app. Like this 👇
 
  ```dart
 return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
-        // must be equal to the WaterDropNavBar backgroundColor
+        //this color must be equal to the WaterDropNavBar backgroundColor
         systemNavigationBarColor: Colors.white, 
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
