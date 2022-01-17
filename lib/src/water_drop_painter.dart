@@ -35,7 +35,6 @@ class WaterDropPainter extends CustomPainter {
     path.lineTo(0, 0);
     path.close();
 
-
     Paint fillColor = Paint()..style = PaintingStyle.fill;
 
     fillColor.color = color;

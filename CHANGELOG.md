@@ -1,3 +1,5 @@
+## 2.1.0+2
+- Updated to get 130 pub points.
 ## 2.1.0+1
 - Readme update
 ## 2.1.0+0
