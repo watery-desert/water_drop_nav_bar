@@ -21,7 +21,7 @@ class BuildIconButton extends StatelessWidget {
           .animate(
             CurvedAnimation(
               parent: controller,
-              curve: Interval(0.55, 1.0),
+              curve: const Interval(0.55, 1.0),
             ),
           )
           .value
@@ -31,7 +31,7 @@ class BuildIconButton extends StatelessWidget {
       .animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.55, 1.0),
+          curve: const Interval(0.55, 1.0),
         ),
       )
       .value;
@@ -40,32 +40,32 @@ class BuildIconButton extends StatelessWidget {
       .animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.60, 1.0),
+          curve: const Interval(0.60, 1.0),
         ),
       )
       .value;
 
-  const BuildIconButton(
-      {required this.onPressed,
-      required this.controller,
-      required this.selectedIcon,
-      required this.unslectedIcon,
-      required this.index,
-      required this.seletedIndex,
-      required this.color,
-      required this.iconSize,
-      required this.inactiveColor,
-      required this.barColor,
-      required this.bottomPadding,
-      required this.barHeight,
-      Key? key})
-      : super(key: key);
+  const BuildIconButton({
+    required this.onPressed,
+    required this.controller,
+    required this.selectedIcon,
+    required this.unslectedIcon,
+    required this.index,
+    required this.seletedIndex,
+    required this.color,
+    required this.iconSize,
+    required this.inactiveColor,
+    required this.barColor,
+    required this.bottomPadding,
+    required this.barHeight,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final mediaQueryData = MediaQuery.of(context);
-    final deviceWidth = mediaQueryData.size.width;
-    final maxElementWidth = deviceWidth / 4;
+    final MediaQueryData mediaQueryData = MediaQuery.of(context);
+    final double deviceWidth = mediaQueryData.size.width;
+    final double maxElementWidth = deviceWidth / 4;
     return GestureDetector(
       onTap: onPressed,
       child: Container(
@@ -76,7 +76,7 @@ class BuildIconButton extends StatelessWidget {
         child: Stack(
           // fit: StackFit.expand,
           alignment: Alignment.bottomCenter,
-          children: [
+          children: <Widget>[
             Transform.scale(
               scale: _bottomIconScale(),
               child: Opacity(

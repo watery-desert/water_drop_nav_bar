@@ -8,17 +8,17 @@ class BuildFallingDrop extends StatelessWidget {
   final Color color;
   final double itemWidth;
 
-  BuildFallingDrop(
-      {required this.width,
-      required this.height,
-      required this.color,
-      required this.itemWidth,
-      Key? key})
-      : super(key: key);
+  const BuildFallingDrop({
+    required this.width,
+    required this.height,
+    required this.color,
+    required this.itemWidth,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: itemWidth,
       child: UnconstrainedBox(
         child: SizedBox(

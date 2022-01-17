@@ -5,31 +5,39 @@
 
 <div align="center">
 
-<a href="https://instagram.com/watery_desert">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/instagram.png" height="32" alt="instagram: watery_desert"></a>
-
-<a href="https://twitter.com/watery_desert">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/twitter.png" height="32" alt="twitter: watery_desert"></a>
-
-<a href="https://dribbble.com/watery_desert">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/dribbble.png" height="32" alt="dribbble: watery_desert"></a>
-
-<a href="https://www.youtube.com/channel/UCMr8V70B4402CNOJEYQ30Qg">
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/social_logo/youtube.png" height="32" alt="youtube: watery_desert"></a>
-
-
-<!-- [![Instagram Badge](https://img.shields.io/badge/-watery_desert-e84393?style=flat-square&labelColor=e84393&logo=instagram&logoColor=white)](https://instagram.com/watery_desert)
-[![Twitter Badge](https://img.shields.io/badge/-watery_desert-1ca0f1?style=flat-square&logo=twitter&logoColor=white&link=https://twitter.com/watery_desert)](https://twitter.com/watery_desert) -->
+[![Instagram Badge](https://img.shields.io/badge/-Instagram-e84393?style=for-the-badge&labelColor=e84393&logo=instagram&logoColor=white)](https://instagram.com/watery_desert)
+[![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/watery_desert)](https://twitter.com/watery_desert)
+[![pub package](https://img.shields.io/pub/v/water_drop_nav_bar.svg?style=for-the-badge)](https://pub.dev/packages/water_drop_nav_bar)
 </div>
+<hr>
 
-## Demo Screen recording
+<a href="https://www.buymeacoffee.com/watery_desert"><img src="https://img.buymeacoffee.com/button-api/?text=Support me &emoji=&slug=watery_desert&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
 
-<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/demo_recording.gif"  width="500"/>
 
-## Design Credit
+## Design Credit & screen recording
 [Animated Tabbar by Cuberto](https://dribbble.com/shots/14723171-Animated-Tabbar)
 
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/demo_recording.gif"  width="300"/>
+
 ## How to use?
+
+
+
+#### Installation
+Add `water_drop_nav_bar:` to your `pubspec.yaml` dependencies then run `flutter pub get`
+
+```yaml
+ dependencies:
+  water_drop_nav_bar:
+```
+#### Import
+Add this line to import the package.
+
+```dart 
+import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
+```
+
+Add `WaterDropNavBar()` as `bottomNavigationBar` of `Scaffold()` and body would be `PageView()` with `NeverScrollableScrollPhysics()` don't try to upate the seleted index from `onPageChanged` or will see some weird behaviour. Insted of `PageView()` You can use `Stack()` or [AnimatedSwitcher](https://api.flutter.dev/flutter/widgets/AnimatedSwitcher-class.html) for custom page transition animation.
 
  <details> 
  <summary> API Reference
@@ -73,29 +81,8 @@ bottomPadding → `double`
 </details> 
 <br>
 
-Add `WaterDropNavBar()` as `bottomNavigationBar` of `Scaffold()` and body would be `PageView()` with `NeverScrollableScrollPhysics()` don't try to upate the seleted index from `onPageChanged` or will see some weird behaviour. Insted of `PageView()` You can use `Stack()` or `AnimatedSwitcher()` for custom page transition animation. 
 
-Keep that in mind this navigation bar is taller than normal for small screen it might cover more screen real estate.
 
-### **Do and don't**
- - Don't make icon size too big.
- - Use complementary filled and outlined icons for best result.
- - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
- - For android I highly recommend to wrap `Scaffold` with [AnnotatedRegion<SystemUiOverlayStyle>] to get best result, check example app I implemented it.
-
-#### Installation
-Add `water_drop_nav_bar:` to your `pubspec.yaml` dependencies then run `flutter pub get`
-
-```yaml
- dependencies:
-  water_drop_nav_bar:
-```
-#### Import
-Add this line to import the package.
-
-```dart 
-import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
-```
 
 ```dart
  return Scaffold(
@@ -136,3 +123,69 @@ import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
       ),
     );
 ```
+
+### Do and don't
+ - Don't make icon size too big.
+ - Use complementary filled and outlined icons for best result.
+ - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
+ - ⚠️ For android it's recommend to wrap `Scaffold` with `AnnotatedRegion<SystemUiOverlayStyle>` to change that black navigation bar color to `WaterDropNavBar` `backgroundColor`. Check tha example app. Like this 👇
+
+ ```dart
+return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        // must be equal to the WaterDropNavBar backgroundColor
+        systemNavigationBarColor: Colors.white, 
+        systemNavigationBarIconBrightness: Brightness.dark,
+      ),
+      child: Scaffold(
+        body: // code here
+      )
+);
+```
+
+
+### FAQ
+
+- #### How do I change the height?
+The height must be constant because the animation is in vertical direction. It was like 100 then I reduced it to 60 now. And this removed the issue with the android device, previously looked huge & ugly. Now according to me should not be an issue. But if you still think needs to be reduced then please file an issue with a screenshot. I will see if I can do something.
+
+- #### How do I add drop shadow?
+
+Wrap `SlidingClippedNavBar` with `DecoratedBox` or `Container` and pass `BoxDecoration` to `decoration` property. `BoxDecoration` takes list of `boxShadow` there you can pass your drop shadow.
+  ``` dart
+  DecoratedBox(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              offset: Offset(0, 4),
+              blurRadius: 8.0)
+        ],
+      ),
+      child: SlidingClippedNavBar()
+  )
+  ```
+
+  - #### How do I change the corner radius of the navigation bar?
+Wrap `SlidingClippedNavBar` with ClipRRect and pass `BorderRadius` to `borderRadius` property.
+``` dart
+  ClipRRect(
+      borderRadius: const BorderRadius.vertical(
+        top: Radius.circular(16),
+      ),
+      child: SlidingClippedNavBar(
+    )                
+```
+
+<br>
+<details>
+   <summary>All flutter packages</summary>
+   <br>
+
+   ● [Sliding Clipped Nav Bar](https://github.com/watery-desert/sliding_clipped_nav_bar)\
+   ➜ [Water Drop Nav Bar](https://github.com/watery-desert/water_drop_nav_bar)\
+   ● [Swipeable Tile](https://github.com/watery-desert/swipeable_tile)\
+   ● [Loading Animation Widget](https://github.com/watery-desert/loading_animation_widget)
+   </summary> 
+</details>
+<br>

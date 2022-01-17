@@ -1,9 +1,4 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility that Flutter provides. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+// ignore_for_file: prefer_function_declarations_over_variables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -11,14 +6,14 @@ import 'package:water_drop_nav_bar/src/build_nav_bar.dart';
 
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 
-OnButtonPressCallback onItemSelected = (int index) {};
+OnButtonPressCallback onItemSelected = (_) {};
 
 void main() {
   testWidgets('expecting default values', (WidgetTester tester) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          bottomNavigationBar: WaterDropNavBar(barItems: [
+          bottomNavigationBar: WaterDropNavBar(barItems: <BarItem>[
             BarItem(
                 filledIcon: Icons.home_filled,
                 outlinedIcon: Icons.home_outlined),
@@ -43,13 +38,14 @@ void main() {
       tester
           .widget<WaterDropNavBar>(find.byType(WaterDropNavBar))
           .waterDropColor,
-      Color(0xFF5B75F0),
+      const Color(0xFF5B75F0),
     );
   });
 
   testWidgets(
       'throws assertion error if items are less than two or greater than four',
       (WidgetTester tester) async {
+    /// base widget
     Widget boilerplate(List<BarItem> items) {
       return MaterialApp(
         home: Material(

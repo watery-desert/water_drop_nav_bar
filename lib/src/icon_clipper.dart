@@ -14,7 +14,7 @@ class IconClipper extends CustomClipper<Rect> {
   }
 
   @override
-  bool shouldReclip(covariant CustomClipper oldClipper) {
+  bool shouldReclip(CustomClipper<Rect> oldClipper) {
     return true;
   }
 }

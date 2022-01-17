@@ -1,3 +1,7 @@
+## 2.1.0+0
+- Added `.pubignore`
+- Improved documentation
+- Added `flutter_lints`
 ## 2.0.0 
  - `onButtonPressed` is now `onItemSelected` 
  - Bar height is readjusted now, it looks better on android.

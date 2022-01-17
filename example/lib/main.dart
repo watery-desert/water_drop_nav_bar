@@ -3,30 +3,35 @@ import 'package:flutter/services.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       // debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          canvasColor: Colors.grey[200],
-          accentColor: Colors.teal[400]),
-      home: MyHomePage(),
+        primarySwatch: Colors.blue,
+        canvasColor: Colors.grey[200],
+      ),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final Color navigationBarColor = Colors.white;
   int selectedIndex = 0;
   late PageController pageController;
   @override
@@ -41,13 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
-          systemNavigationBarColor: Colors.white,
-          systemNavigationBarIconBrightness: Brightness.dark),
+        systemNavigationBarColor: navigationBarColor,
+        systemNavigationBarIconBrightness: Brightness.dark,
+      ),
       child: Scaffold(
         body: PageView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           controller: pageController,
-          children: [
+          children: <Widget>[
             Container(
               alignment: Alignment.center,
               child: Icon(
@@ -83,9 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
         bottomNavigationBar: WaterDropNavBar(
-          // bottomPadding: 8.0, for android maybe, test by yourself what is suitable
-          backgroundColor: Colors.white,
-          onItemSelected: (index) {
+          backgroundColor: navigationBarColor,
+          onItemSelected: (int index) {
             setState(() {
               selectedIndex = index;
             });
@@ -94,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 curve: Curves.easeOutQuad);
           },
           selectedIndex: selectedIndex,
-          barItems: [
+          barItems: <BarItem>[
             BarItem(
               filledIcon: Icons.bookmark_rounded,
               outlinedIcon: Icons.bookmark_border_rounded,
@@ -116,4 +121,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
