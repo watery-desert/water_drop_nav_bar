@@ -1,3 +1,5 @@
+## 2.1.0+1
+- Readme update
 ## 2.1.0+0
 - Added `.pubignore`
 - Improved documentation

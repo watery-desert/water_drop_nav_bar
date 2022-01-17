@@ -147,6 +147,7 @@ return AnnotatedRegion<SystemUiOverlayStyle>(
 ### FAQ
 
 - #### How do I change the height?
+
 The height must be constant because the animation is in vertical direction. It was like 100 then I reduced it to 60 now. And this removed the issue with the android device, previously looked huge & ugly. Now according to me should not be an issue. But if you still think needs to be reduced then please file an issue with a screenshot. I will see if I can do something.
 
 - #### How do I add drop shadow?
@@ -167,6 +168,7 @@ Wrap `SlidingClippedNavBar` with `DecoratedBox` or `Container` and pass `BoxDeco
   ```
 
   - #### How do I change the corner radius of the navigation bar?
+  
 Wrap `SlidingClippedNavBar` with ClipRRect and pass `BorderRadius` to `borderRadius` property.
 ``` dart
   ClipRRect(
