@@ -11,6 +11,7 @@
 </div>
 <hr>
 
+#### If you like this package please consider supporting me. This will help me to make and maintain free and open source flutter packages.
 
 <a href="https://www.buymeacoffee.com/watery_desert"><img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/bmc-button.png" height="56"></a>
 
@@ -86,6 +87,7 @@ bottomPadding → `double`
  - Use complementary filled and outlined icons for best result.
  - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
 
+#### Short example
 
 ```dart
  return Scaffold(
@@ -93,7 +95,7 @@ bottomPadding → `double`
       body: PageView(
       physics: NeverScrollableScrollPhysics(),       
       controller: pageController,
-...
+       ...
       ),
       bottomNavigationBar: WaterDropNavBar(
         backgroundColor: Colors.white,
@@ -114,18 +116,12 @@ bottomPadding → `double`
           BarItem(
               filledIcon: Icons.favorite_rounded,
               outlinedIcon: Icons.favorite_border_rounded),
-          BarItem(
-            filledIcon: Icons.email_rounded,
-            outlinedIcon: Icons.email_outlined,
-          ),
-          BarItem(
-            filledIcon: Icons.folder_rounded,
-            outlinedIcon: Icons.folder_outlined,
-          ),
         ],
       ),
     );
 ```
+
+<hr>
 
  ### Issues ❗️
 
@@ -172,6 +168,7 @@ Now you might ask how do you know which phone is using swipe home gesture?
 
 Well, you can check bottom padding (using `MediaQuery.of(context).padding.bottom`) and if it's less than 34 or something then provide some bottom padding. Definitely try running different simulators and see. 
 
+<hr>
 
 ### FAQ
 
