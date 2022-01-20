@@ -11,7 +11,7 @@
 </div>
 <hr>
 
-#### If you like this package please consider supporting me. This will help me to make and maintain free and open source flutter packages.
+### If you like this package please consider supporting me. This will help me to make and maintain free and open source flutter packages.
 
 <a href="https://www.buymeacoffee.com/watery_desert"><img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/bmc-button.png" height="56"></a>
 
@@ -121,7 +121,6 @@ bottomPadding → `double`
     );
 ```
 
-
  ## Issues ❗️
 
  #### Android
@@ -167,7 +166,6 @@ Now you might ask how do you know which phone is using swipe home gesture?
 
 Well, you can check bottom padding (using `MediaQuery.of(context).padding.bottom`) and if it's less than 34 or something then provide some bottom padding. Definitely try running different simulators and see. 
 
-<hr>
 
 ## FAQ
 
