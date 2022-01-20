@@ -42,13 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    /// [AnnotatedRegion<SystemUiOverlayStyle>] is only for android
+    /// [AnnotatedRegion<SystemUiOverlayStyle>] only for android black navigation bar. 3 button navigation control (legacy)
+    final padding = MediaQuery.of(context).padding.bottom;
+
+    print(padding);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
-        systemNavigationBarColor: navigationBarColor,
-        systemNavigationBarIconBrightness: Brightness.dark,
-      ),
+          // systemNavigationBarColor: navigationBarColor,
+          // systemNavigationBarIconBrightness: Brightness.dark,
+          ),
       child: Scaffold(
         body: PageView(
           physics: const NeverScrollableScrollPhysics(),
@@ -89,6 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
         bottomNavigationBar: WaterDropNavBar(
+
           backgroundColor: navigationBarColor,
           onItemSelected: (int index) {
             setState(() {

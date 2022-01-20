@@ -14,6 +14,7 @@ class BuildNavBar extends StatefulWidget {
   final Color dropColor;
   final double iconSize;
   final Color inactiveIconColor;
+  final double? bottomPadding;
 
   const BuildNavBar({
     Key? key,
@@ -24,6 +25,7 @@ class BuildNavBar extends StatefulWidget {
     required this.dropColor,
     required this.iconSize,
     required this.inactiveIconColor,
+    required this.bottomPadding,
   }) : super(key: key);
 
   @override
@@ -72,7 +74,8 @@ class _BuildNavBarState extends State<BuildNavBar>
     final List<BarItem> items = widget.itmes;
     final double iconSize = widget.iconSize;
     final Color inactiveIconColor = widget.inactiveIconColor;
-    final double bottomPadding = MediaQuery.of(context).padding.bottom;
+    final double bottomPadding =
+        widget.bottomPadding ?? MediaQuery.of(context).padding.bottom;
     final double barHeight = 60 + bottomPadding;
     return Container(
       height: barHeight,

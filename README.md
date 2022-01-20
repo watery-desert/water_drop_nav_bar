@@ -11,7 +11,8 @@
 </div>
 <hr>
 
-<a href="https://www.buymeacoffee.com/watery_desert"><img src="https://img.buymeacoffee.com/button-api/?text=Support me &emoji=&slug=watery_desert&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+
+<a href="https://www.buymeacoffee.com/watery_desert"><img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/bmc-button.png" height="56"></a>
 
 
 ## Design Credit & screen recording
@@ -74,13 +75,17 @@ iconSize → `double`
 *optional [28]* 
 
 bottomPadding → `double`
-- Bottom padding of the bar. If nothing is provided the it will use
+- Additional padding at the bottom of the bar. If nothing is provided the it will use
   [MediaQuery.of(context).padding.bottom] value.\
  *optional*  
 
 </details> 
 <br>
 
+### Do and don't
+ - Don't make icon size too big.
+ - Use complementary filled and outlined icons for best result.
+ - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
 
 
 
@@ -124,11 +129,15 @@ bottomPadding → `double`
     );
 ```
 
-### Do and don't
- - Don't make icon size too big.
- - Use complementary filled and outlined icons for best result.
- - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
- - ⚠️ For android it's recommended to wrap `Scaffold` with `AnnotatedRegion<SystemUiOverlayStyle>` to change that black navigation bar color to `WaterDropNavBar` `backgroundColor`. Check the example app. Like this 👇
+ ### Problems ⚠️
+
+ #### Android
+
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/android-problem.png"  width="300"/>
+
+<br>
+
+ Some android phones might have black navigation bar, this looks ugly. It's recommended to wrap `Scaffold` with `AnnotatedRegion<SystemUiOverlayStyle>` to change that black navigation bar color to `WaterDropNavBar` `backgroundColor`. Check the example app. Like this 👇
 
  ```dart
 return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -143,12 +152,34 @@ return AnnotatedRegion<SystemUiOverlayStyle>(
 );
 ```
 
+result 👇
+
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/android-solution.png"  width="300"/>
+
+<br>
+
+You can additionally provide some `bottomPadding` to add padding at the bottom of the bar, I think 8 is enough.
+
+#### iPhone
+
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/old-iphone-problem.png"  width="300"/>
+
+iPhones without swipe home gesture might have such issue where icons are pushed to the bottom. Provide some `bottomPadding`. I added 8 padding here.
+
+result 👇
+
+<img src="https://raw.githubusercontent.com/watery-desert/assets/main/water_drop_nav_bar/old-iphone-solution.png"  width="300"/>
+
+Now you might ask how do you know which phone is using swipe home gesture? 
+
+Well, you can check bottom padding (using `MediaQuery.of(context).padding.bottom`) and if it's less than 34 or something then provide some bottom padding. Definitely try running different simulators and see. 
+
 
 ### FAQ
 
 - #### How do I change the height?
 
-The height must be constant because the animation is in vertical direction. It was like 100 then I reduced it to 60 now. And this removed the issue with the android device, previously looked huge & ugly. Now according to me should not be an issue. But if you still think needs to be reduced then please file an issue with a screenshot. I will see if I can do something.
+The height must be constant because the animation is in vertical direction. According to me 60 is perfect. But if you think needs to be reduced then please create an issue with a screenshot. I will see if I can do something.
 
 - #### How do I add drop shadow?
 
