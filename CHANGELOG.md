@@ -1,3 +1,5 @@
+## 2.1.0+4
+- Refactor example
 ## 2.1.0+3
 - Improved documentation.
 ## 2.1.0+2
