@@ -80,13 +80,11 @@ bottomPadding → `double`
  *optional*  
 
 </details> 
-<br>
 
 ### Do and don't
  - Don't make icon size too big.
  - Use complementary filled and outlined icons for best result.
  - `backgroundColor` and `waterDropColor` of `WaterDropNavBar()` and `Scaffold()`'s `backgroundColor` (or whatever widget you are using) must be different (see the example app) This will visualize that the water drop is hanging from the top.
-
 
 
 ```dart
