@@ -127,7 +127,7 @@ bottomPadding → `double`
     );
 ```
 
- ### Problems ⚠️
+ ### Issues ❗️
 
  #### Android
 
