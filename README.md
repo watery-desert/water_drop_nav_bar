@@ -121,9 +121,8 @@ bottomPadding → `double`
     );
 ```
 
-<hr>
 
- ### Issues ❗️
+ ## Issues ❗️
 
  #### Android
 
@@ -170,7 +169,7 @@ Well, you can check bottom padding (using `MediaQuery.of(context).padding.bottom
 
 <hr>
 
-### FAQ
+## FAQ
 
 - #### How do I change the height?
 
