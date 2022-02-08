@@ -175,7 +175,7 @@ The height must be constant because the animation is in vertical direction. Acco
 
 - #### How do I add drop shadow?
 
-Wrap `SlidingClippedNavBar` with `DecoratedBox` or `Container` and pass `BoxDecoration` to `decoration` property. `BoxDecoration` takes list of `boxShadow` there you can pass your drop shadow.
+Wrap `WaterDropNavBar` with `DecoratedBox` or `Container` and pass `BoxDecoration` to `decoration` property. `BoxDecoration` takes list of `boxShadow` there you can pass your drop shadow.
   ``` dart
   DecoratedBox(
       decoration: BoxDecoration(
@@ -186,19 +186,19 @@ Wrap `SlidingClippedNavBar` with `DecoratedBox` or `Container` and pass `BoxDeco
               blurRadius: 8.0)
         ],
       ),
-      child: SlidingClippedNavBar()
+      child: WaterDropNavBar()
   )
   ```
 
   - #### How do I change the corner radius of the navigation bar?
   
-Wrap `SlidingClippedNavBar` with ClipRRect and pass `BorderRadius` to `borderRadius` property.
+Wrap `WaterDropNavBar` with ClipRRect and pass `BorderRadius` to `borderRadius` property.
 ``` dart
   ClipRRect(
       borderRadius: const BorderRadius.vertical(
         top: Radius.circular(16),
       ),
-      child: SlidingClippedNavBar(
+      child: WaterDropNavBar(
     )                
 ```
 
