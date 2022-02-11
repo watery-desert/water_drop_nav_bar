@@ -11,10 +11,6 @@
 </div>
 <hr>
 
-#### ⚠️ If you like this package please consider supporting me. This will help me to maintain free and open source flutter packages.
-
-<a href="https://www.buymeacoffee.com/watery_desert"><img src="https://raw.githubusercontent.com/watery-desert/assets/main/watery_desert/bmc-button.png" height="56"></a>
-
 
 ## Design Credit & screen recording
 [Animated Tabbar by Cuberto](https://dribbble.com/shots/14723171-Animated-Tabbar)
