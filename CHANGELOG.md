@@ -1,3 +1,5 @@
+## 2.1.0+8
+- Readme update
 ## 2.1.0+7
 - Added discord link
 ## 2.1.0+6
