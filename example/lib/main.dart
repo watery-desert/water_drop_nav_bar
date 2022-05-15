@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.grey,
         body: PageView(
           physics: const NeverScrollableScrollPhysics(),
           controller: pageController,
@@ -89,37 +89,34 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        bottomNavigationBar: ClipRRect(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-          child: WaterDropNavBar(
-            backgroundColor: navigationBarColor,
-            onItemSelected: (int index) {
-              setState(() {
-                selectedIndex = index;
-              });
-              pageController.animateToPage(selectedIndex,
-                  duration: const Duration(milliseconds: 400),
-                  curve: Curves.easeOutQuad);
-            },
-            selectedIndex: selectedIndex,
-            barItems: <BarItem>[
-              BarItem(
-                filledIcon: Icons.bookmark_rounded,
-                outlinedIcon: Icons.bookmark_border_rounded,
-              ),
-              BarItem(
-                  filledIcon: Icons.favorite_rounded,
-                  outlinedIcon: Icons.favorite_border_rounded),
-              BarItem(
-                filledIcon: Icons.email_rounded,
-                outlinedIcon: Icons.email_outlined,
-              ),
-              BarItem(
-                filledIcon: Icons.folder_rounded,
-                outlinedIcon: Icons.folder_outlined,
-              ),
-            ],
-          ),
+        bottomNavigationBar: WaterDropNavBar(
+          backgroundColor: navigationBarColor,
+          onItemSelected: (int index) {
+            setState(() {
+              selectedIndex = index;
+            });
+            pageController.animateToPage(selectedIndex,
+                duration: const Duration(milliseconds: 400),
+                curve: Curves.easeOutQuad);
+          },
+          selectedIndex: selectedIndex,
+          barItems: <BarItem>[
+            BarItem(
+              filledIcon: Icons.bookmark_rounded,
+              outlinedIcon: Icons.bookmark_border_rounded,
+            ),
+            BarItem(
+                filledIcon: Icons.favorite_rounded,
+                outlinedIcon: Icons.favorite_border_rounded),
+            BarItem(
+              filledIcon: Icons.email_rounded,
+              outlinedIcon: Icons.email_outlined,
+            ),
+            BarItem(
+              filledIcon: Icons.folder_rounded,
+              outlinedIcon: Icons.folder_outlined,
+            ),
+          ],
         ),
       ),
     );
