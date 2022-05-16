@@ -1,3 +1,5 @@
+## 2.2.0+2
+- formatted the code
 ## 2.2.0+1
 - Fixed example app missing
 ## 2.2.0
