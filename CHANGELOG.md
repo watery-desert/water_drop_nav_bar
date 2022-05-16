@@ -1,3 +1,5 @@
+## 2.2.0+1
+- Fixed example app missing
 ## 2.2.0
 - Improved internal code & structure
 ## 2.1.0+9 
