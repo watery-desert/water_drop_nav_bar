@@ -6,7 +6,6 @@ import 'build_running_drop.dart';
 
 typedef OnButtonPressCallback = void Function(int index);
 
-
 class WaterDropNavBar extends StatefulWidget {
   /// Background Color of the bar.
   final Color backgroundColor;
