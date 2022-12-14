@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        canvasColor: Colors.grey[200],
+        canvasColor: Color.fromARGB(255, 232, 232, 232),
       ),
       home: const MyHomePage(),
     );
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
-        backgroundColor: Colors.grey,
+        // backgroundColor: Colors.grey,
         body: PageView(
           physics: const NeverScrollableScrollPhysics(),
           controller: pageController,
