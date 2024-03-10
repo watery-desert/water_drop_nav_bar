@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:water_drop_nav_bar/src/build_nav_bar.dart';
+
 
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 

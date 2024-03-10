@@ -1,10 +1,10 @@
 name: water_drop_nav_bar
 description: Bottom navigation bar, it has unique water drop effect. When water droplet falls it marks seleted item.
-version: 2.2.0+5
+version: 2.2.1
 repository: https://github.com/watery-desert/water_drop_nav_bar
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
+  sdk: ">=2.16.0 <4.0.0"
 
 dependencies:
   flutter:

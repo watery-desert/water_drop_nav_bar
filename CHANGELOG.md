@@ -1,9 +1,5 @@
-## 2.2.0+5
-- Readme update
-## 2.2.0+4
-- Readme update
-## 2.2.0+3
-- Readme update
+## 2.2.1
+- dart sdk constraint update
 ## 2.2.0+2
 - formatted the code
 ## 2.2.0+1
