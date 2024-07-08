@@ -1,3 +1,5 @@
+## 2.2.2
+- `onItemSelected` will now emit already selected index
 ## 2.2.1
 - dart sdk constraint update
 ## 2.2.0+2

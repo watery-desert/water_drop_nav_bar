@@ -70,13 +70,25 @@ class _WaterDropNavBarState extends State<WaterDropNavBar>
   void _onTap(int index) {
     final int selectedIndex = widget.selectedIndex;
 
-    if (selectedIndex == index || _controller.isAnimating) {
+    if (_controller.isAnimating) {
       return;
+    } else if (selectedIndex == index) {
+      widget.onItemSelected(index);
     } else {
       widget.onItemSelected(index);
+
       _controller.forward(from: 0.0);
+
       _previousIndex = widget.selectedIndex;
     }
+
+    // if (selectedIndex == index || _controller.isAnimating) {
+    //   return;
+    // } else {
+    //   widget.onItemSelected(index);
+    //   _controller.forward(from: 0.0);
+    //   _previousIndex = widget.selectedIndex;
+    // }
   }
 
   @override
