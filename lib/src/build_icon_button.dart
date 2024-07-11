@@ -5,8 +5,8 @@ import 'icon_clipper.dart';
 class BuildIconButton extends StatelessWidget {
   final VoidCallback onPressed;
   final AnimationController controller;
-  final IconData selectedIcon;
-  final IconData unslectedIcon;
+  final Widget selectedIcon;
+  final Widget unslectedIcon;
   final int seletedIndex;
   final int index;
   final Color color;
@@ -80,14 +80,12 @@ class BuildIconButton extends StatelessWidget {
             Transform.scale(
               scale: _bottomIconScale(),
               child: Opacity(
-                  opacity: controller.value > 0.8 && seletedIndex == index
-                      ? 0.0
-                      : 1.0,
-                  child: Icon(
-                    unslectedIcon,
-                    size: iconSize,
-                    color: inactiveColor,
-                  )),
+                opacity: controller.value > 0.8 && seletedIndex == index ? 0.0 : 1.0,
+                child: SizedBox(
+                  height: iconSize,
+                  child: unslectedIcon,
+                ),
+              ),
             ),
             Transform.scale(
               scale: _topIconScale(),
@@ -96,15 +94,11 @@ class BuildIconButton extends StatelessWidget {
                   radius: _clipRadius(),
                 ),
                 child: Opacity(
-                  opacity: controller.value > 0.6 && seletedIndex == index
-                      ? 1.0
-                      : 0.0,
-                  child: Icon(
-                    selectedIcon,
-                    size: iconSize,
-                    color: color,
-                  ),
-                ),
+                    opacity: controller.value > 0.6 && seletedIndex == index ? 1.0 : 0.0,
+                    child: SizedBox(
+                      height: iconSize,
+                      child: selectedIcon,
+                    )),
               ),
             ),
           ],
