@@ -32,10 +32,14 @@ class WaterDropNavBar extends StatefulWidget {
   /// [MediaQuery.of(context).padding.bottom] value.
   final double? bottomPadding;
 
+  // Allow modification of barHeight. If nothis is provided, it will use 60 as default
+  final double? barHeight;
+
   const WaterDropNavBar({
     required this.barItems,
     required this.selectedIndex,
     required this.onItemSelected,
+    this.barHeight,
     this.bottomPadding,
     this.backgroundColor = Colors.white,
     this.waterDropColor = const Color(0xFF5B75F0),
@@ -101,7 +105,7 @@ class _WaterDropNavBarState extends State<WaterDropNavBar>
     final Color inactiveIconColor = widget.inactiveIconColor;
     final double bottomPadding =
         widget.bottomPadding ?? MediaQuery.of(context).padding.bottom;
-    final double barHeight = 60 + bottomPadding;
+    final double barHeight = (barHeight??60) + bottomPadding;
     return Container(
       height: barHeight,
       color: backgroundColor,
