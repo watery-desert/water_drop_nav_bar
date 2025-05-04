@@ -44,7 +44,7 @@ class WaterDropNavBar extends StatefulWidget {
     Key? key,
   })  : inactiveIconColor = inactiveIconColor ?? waterDropColor,
         assert(barItems.length > 1, 'You must provide minimum 2 bar items'),
-        assert(barItems.length < 5, 'Maximum bar items count is 4'),
+        assert(barItems.length < 8, 'Maximum bar items count is 4'),
         super(key: key);
 
   @override
